@@ -2,4 +2,4 @@ namespace DiceCityEngine
 
 module Say =
     let hello name =
-        printfn "Hello %s" name
+        sprintf "Hello %s" name
