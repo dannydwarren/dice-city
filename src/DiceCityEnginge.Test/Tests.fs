@@ -7,5 +7,11 @@ open Akka.TestKit.Xunit
 
 [<Fact>]
 let ``DiceActor Rolls Single Dice`` () =
-    let actor = 1//ActorOf<DiceActor>
-    Assert.NotNull(actor)
+    let diceActor = DiceCityEngine.GameActors.DiceActor()
+
+    // let actor = Akka.TestKit.TestActorRef<DiceActor>
+    Assert.NotNull(diceActor)
+
+    let a = diceActor.Roll
+
+    Assert.Equal(3, a)
